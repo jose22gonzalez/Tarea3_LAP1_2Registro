@@ -1,0 +1,29 @@
+<Window x:Class="Tarea3_LAP1_2Registro.UI.Registro.rCarrera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea3_LAP1_2Registro.UI.Registro"
+        mc:Ignorable="d"
+       Title="Registro Carrera" Height="647" Width="360">
+    <Grid Margin="0,0,0,-6" >
+        <Label Content="CarreraID:" HorizontalAlignment="Left" Margin="21,44,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="carreraidTextBox" HorizontalAlignment="Left" Margin="21,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="21,104,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+      <ComboBox x:Name="nombrecombobox" HorizontalAlignment="Left" Margin="21,152,0,0" VerticalAlignment="Top" Width="244">
+            <ComboBox.Items>
+                <ComboBoxItem Content="Medicina" /> 
+                <ComboBoxItem Content="Derecho" />
+                <ComboBoxItem Content="Psicologia" />
+                <ComboBoxItem Content="Ing.Sistemas" />
+                <ComboBoxItem Content="Ing.Civil" />
+                <ComboBoxItem Content="Arquitectura" />
+                <ComboBoxItem Content="Turismo" />
+            </ComboBox.Items>
+        </ComboBox>  
+        <Button Content="📰Guardar" HorizontalAlignment="Left" Margin="28,200,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Click="Clcik_GuardarButton"/>
+        <Button Content="📝Editar" HorizontalAlignment="Left" Margin="110,200,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="76" Click="Clcik_EditarButton"/>
+       <Button Content="⛔Eliminar" HorizontalAlignment="Left" Margin="188,200,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="77" Height="23" Click="Clcik_EliminarButton"/>
+        <DataGrid x:Name="DataCarreraGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="21,256,47,211"/>  <!--   -->
+    </Grid>
+</Window>
